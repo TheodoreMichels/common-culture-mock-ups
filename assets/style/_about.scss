@@ -1,3 +1,15 @@
 #about-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    
     display: none;
+    
+    background-color: transparentize($off-white, 0.2);
+    
+    .text-container{
+        @include center-in-parent;
+    }
 }

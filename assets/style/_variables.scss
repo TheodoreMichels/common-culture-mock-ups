@@ -5,6 +5,10 @@ $font-size-l: 50px;
 $font-size-m: 30px;
 $font-size-s: 20px;
 
+$spacing-m: 40px;
+
+$site-max-width: 1400px;
+
 @mixin center-in-parent{
     position: absolute;
     top: 50%;

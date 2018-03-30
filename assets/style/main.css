@@ -1,5 +1,6 @@
 * {
-  margin: 0; }
+  margin: 0;
+  box-sizing: border-box; }
 
 body {
   background-color: #f4f1ea;
@@ -7,7 +8,11 @@ body {
   overflow-x: hidden; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: black; }
+
+p {
+  font-size: 20px; }
 
 h1, h2, h3 {
   text-transform: uppercase; }
@@ -17,6 +22,9 @@ h1 {
 
 h3 {
   font-size: 30px; }
+
+h4 {
+  font-size: 20px; }
 
 ul {
   list-style: none;
@@ -31,10 +39,23 @@ ul {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+    width: 100%;
     cursor: pointer;
     text-align: center; }
+  #image-stack-container .img-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); }
+  #image-stack-container .left {
+    left: 0%;
+    transition: 1s all cubic-bezier(0.19, 1, 0.22, 1); }
+  #image-stack-container .right {
+    left: 100%;
+    transition: 1s all cubic-bezier(0.19, 1, 0.22, 1); }
   #image-stack-container img {
-    width: 500px; }
+    width: 500px;
+    transition: 1s all; }
 
 #landing-container {
   text-align: center; }
@@ -47,22 +68,110 @@ ul {
     transform: translateY(-50%); }
     #landing-container #landing-title span {
       display: block; }
+    #landing-container #landing-title span.open {
+      opacity: 0.0;
+      transition: 1.5s all; }
     #landing-container #landing-title span:nth-child(1).open {
       transform: translateY(-25%);
-      transition: .5s all; }
+      transition: 1s all; }
     #landing-container #landing-title span:nth-child(2).open {
       transform: translateY(25%);
-      transition: .5s all; }
+      transition: 1s all; }
   #landing-container #landing-nav {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     display: none; }
-    #landing-container #landing-nav li {
-      display: inline-block; }
 
 #about-overlay {
-  display: none; }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  background-color: rgba(244, 241, 234, 0.8); }
+  #about-overlay .text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); }
+
+#products-gallery {
+  box-sizing: border-box;
+  padding: 10px;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-size: 0; }
+  #products-gallery .gallery-item-box {
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 33.33%;
+    width: calc(100% / 3.0); }
+  #products-gallery .gallery-item {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    background-size: cover;
+    background-position: center center;
+    transition: .3s all; }
+    #products-gallery .gallery-item .overlay {
+      opacity: 0.0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      transition: .3s all; }
+      #products-gallery .gallery-item .overlay h3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        color: white; }
+  #products-gallery .alt-image {
+    background-image: url("../images/jacket-close.jpg");
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.0;
+    transition: .3s all; }
+  #products-gallery .gallery-item:hover {
+    transition: .3s all; }
+    #products-gallery .gallery-item:hover .alt-image {
+      opacity: 1.0;
+      transition: .3s all; }
+  #products-gallery .gallery-item:hover .overlay {
+    opacity: 1.0;
+    transition: .3s all; }
+
+#product-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f4f1ea; }
+  #product-overlay .content-container {
+    font-size: 0;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%; }
+    #product-overlay .content-container .left, #product-overlay .content-container .right {
+      display: inline-block;
+      width: 50%;
+      height: 100%; }
+    #product-overlay .content-container .right {
+      padding: 40px;
+      vertical-align: top; }
 
 /*# sourceMappingURL=main.css.map */

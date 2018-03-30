@@ -1,0 +1,73 @@
+#products-gallery {
+    box-sizing: border-box;
+    padding: 10px;
+    max-width: $site-max-width;
+    margin: 0 auto;
+    font-size: 0;
+
+
+
+    .gallery-item-box {
+        padding: 10px;
+        box-sizing: border-box;
+        display: inline-block;
+        width: 33.33%;
+        width: calc(100% / 3.0);
+    }
+    .gallery-item {
+        cursor: pointer;
+        
+        position: relative;
+        width: 100%; //height: 100%;
+        padding-top: 100%;
+        background-size: cover;
+        background-position: center center;
+
+        //filter: grayscale(100%);
+        transition: .3s all;
+
+        .overlay {
+            opacity: 0.0;
+            
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            
+            transition: .3s all;
+            h3{
+                @include center-in-parent;
+                color: white;
+            }
+        }
+    }
+    .alt-image{
+        background-image: url('../images/jacket-close.jpg');
+        background-position: center center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        
+        opacity: 0.0;
+        transition: .3s all;
+    }
+    .gallery-item:hover{
+        //filter: grayscale(0%);
+        transition: .3s all;
+        
+        .alt-image{
+            opacity: 1.0;
+            transition: .3s all;
+        }
+    }
+    .gallery-item:hover .overlay{
+        opacity: 1.0;
+        transition: .3s all;
+    }
+
+}

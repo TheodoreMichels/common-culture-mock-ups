@@ -5,12 +5,25 @@
     
     .image-stack{
         @include center-in-parent;
+        width: 100%;
         cursor: pointer;
         text-align: center;
     }
-    
+    .img-container{
+        @include center-in-parent;
+        
+    }
+    .left{
+        left: 0%;
+        transition: 1s all cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    .right{
+        left: 100%;
+        transition: 1s all cubic-bezier(0.19, 1, 0.22, 1);
+    }
     img{
         width: 500px;
+        transition: 1s all;
     }
 }
 
@@ -32,14 +45,17 @@
         span{
             display: block;
         }
-        
+        span.open{
+            opacity: 0.0;
+            transition: 1.5s all;
+        }
         span:nth-child(1).open{
             transform: translateY(-25%);
-            transition: .5s all;
+            transition: 1s all;
         }
         span:nth-child(2).open{
             transform: translateY(25%);
-            transition: .5s all;
+            transition: 1s all;
         }
         
     }
@@ -48,7 +64,7 @@
         @include center-in-parent;
         display: none;
         li{
-            display: inline-block;
+            //display: inline-block;
         }
     }
 }
