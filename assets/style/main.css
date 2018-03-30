@@ -1,0 +1,68 @@
+* {
+  margin: 0; }
+
+body {
+  background-color: #f4f1ea;
+  min-height: 100vh;
+  overflow-x: hidden; }
+
+a {
+  text-decoration: none; }
+
+h1, h2, h3 {
+  text-transform: uppercase; }
+
+h1 {
+  font-size: 70px; }
+
+h3 {
+  font-size: 30px; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+#image-stack-container {
+  position: fixed;
+  width: 100%;
+  height: 100vh; }
+  #image-stack-container .image-stack {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    cursor: pointer;
+    text-align: center; }
+  #image-stack-container img {
+    width: 500px; }
+
+#landing-container {
+  text-align: center; }
+  #landing-container #landing-title {
+    pointer-events: none;
+    color: white;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%); }
+    #landing-container #landing-title span {
+      display: block; }
+    #landing-container #landing-title span:nth-child(1).open {
+      transform: translateY(-25%);
+      transition: .5s all; }
+    #landing-container #landing-title span:nth-child(2).open {
+      transform: translateY(25%);
+      transition: .5s all; }
+  #landing-container #landing-nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: none; }
+    #landing-container #landing-nav li {
+      display: inline-block; }
+
+#about-overlay {
+  display: none; }
+
+/*# sourceMappingURL=main.css.map */

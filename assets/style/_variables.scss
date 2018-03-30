@@ -1,0 +1,13 @@
+$off-white: #f4f1ea;
+
+$font-size-xl: 70px;
+$font-size-l: 50px;
+$font-size-m: 30px;
+$font-size-s: 20px;
+
+@mixin center-in-parent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
