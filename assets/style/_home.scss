@@ -33,6 +33,11 @@
     .text-container{
         
     }
+    .accent{
+        @include center-in-parent;
+        pointer-events: none;
+        mix-blend-mode: multiply;
+    }
     #landing-title{
         pointer-events: none;
         color: white;
@@ -63,8 +68,17 @@
     #landing-nav{
         @include center-in-parent;
         display: none;
+        
         li{
+            margin: $spacing-xs;
             //display: inline-block;
+            h3{
+                text-transform: lowercase;
+                a:hover{
+                    color: white;
+                }
+            }
+            
         }
     }
 }

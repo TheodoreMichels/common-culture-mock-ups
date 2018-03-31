@@ -1,17 +1,28 @@
 $off-white: #f4f1ea;
 
+$accent-red: #fa374a;
+
 $font-size-xl: 70px;
 $font-size-l: 50px;
 $font-size-m: 30px;
 $font-size-s: 20px;
 
 $spacing-m: 40px;
+$spacing-xs: 10px;
 
 $site-max-width: 1400px;
+
+$title-font: BigCaslonMedium, serif;
+$general-font: BigCaslonMedium, serif;
 
 @mixin center-in-parent{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+}
+
+@font-face{
+    font-family: BigCaslonMedium;
+    src: url(../fonts/BigCaslonMedium.ttf);
 }

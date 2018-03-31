@@ -21,11 +21,51 @@
             height: 100%;
         }
         .left{
-            
+            position: relative;
+            .img-stack{
+                height: 100%;
+            }
+            .img-container{
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 1.0;
+                transform: translateY(0);
+                height: 100%;
+                width: 100%;
+                
+                transition: .5s all;
+                img{
+                    @include center-in-parent;
+                    
+                    z-index: 20;
+                    
+                    cursor: pointer;
+                    width: 500px;
+                    
+                    box-shadow: 0 0 50px 30px rgba(0, 0, 0, 0.05);
+                }
+            }
+            .img-container.clicked{
+                opacity: 0.0;
+                transform: translateY(-50%);
+                
+                transition: .5s all;
+            }
         }
         .right{
             padding: $spacing-m;
             vertical-align: top;
+            position: relative;
+            
+            .close{
+                float: right;
+                
+            }
+            
+            .text-container{
+                @include center-in-parent;
+            }
         }
     }
 }

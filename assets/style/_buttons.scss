@@ -1,7 +1,13 @@
 button{
-    
+    cursor: pointer;
 }
 
 button.close{
-    
+    border: none;
+    background: none;
+    font-size: $font-size-s;
+    font-family: $title-font;
+}
+button.close:hover{
+    color: $accent-red;
 }

@@ -11,5 +11,25 @@
     
     .text-container{
         @include center-in-parent;
+        
+        max-width: 600px;
+        
+        text-align: center;
+        
+        .close{
+            position: absolute;
+            top: -20px;
+            right: -20px;
+        }
+    }
+    
+    .social{
+        margin: $spacing-m;
+        text-transform: uppercase;
+        ul{
+            li{
+                display: inline-block;
+            }
+        }
     }
 }

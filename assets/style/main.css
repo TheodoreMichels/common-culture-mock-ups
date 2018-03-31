@@ -1,3 +1,6 @@
+@font-face {
+  font-family: BigCaslonMedium;
+  src: url(../fonts/BigCaslonMedium.ttf); }
 * {
   margin: 0;
   box-sizing: border-box; }
@@ -5,17 +8,21 @@
 body {
   background-color: #f4f1ea;
   min-height: 100vh;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-family: BigCaslonMedium, serif; }
 
 a {
   text-decoration: none;
   color: black; }
 
-p {
+p, li {
   font-size: 20px; }
 
 h1, h2, h3 {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: BigCaslonMedium, serif;
+  font-weight: 300;
+  letter-spacing: 5px; }
 
 h1 {
   font-size: 70px; }
@@ -59,6 +66,13 @@ ul {
 
 #landing-container {
   text-align: center; }
+  #landing-container .accent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    pointer-events: none;
+    mix-blend-mode: multiply; }
   #landing-container #landing-title {
     pointer-events: none;
     color: white;
@@ -83,6 +97,12 @@ ul {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     display: none; }
+    #landing-container #landing-nav li {
+      margin: 10px; }
+      #landing-container #landing-nav li h3 {
+        text-transform: lowercase; }
+        #landing-container #landing-nav li h3 a:hover {
+          color: white; }
 
 #about-overlay {
   position: fixed;
@@ -96,7 +116,18 @@ ul {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%); }
+    transform: translateX(-50%) translateY(-50%);
+    max-width: 600px;
+    text-align: center; }
+    #about-overlay .text-container .close {
+      position: absolute;
+      top: -20px;
+      right: -20px; }
+  #about-overlay .social {
+    margin: 40px;
+    text-transform: uppercase; }
+    #about-overlay .social ul li {
+      display: inline-block; }
 
 #products-gallery {
   box-sizing: border-box;
@@ -170,8 +201,54 @@ ul {
       display: inline-block;
       width: 50%;
       height: 100%; }
+    #product-overlay .content-container .left {
+      position: relative; }
+      #product-overlay .content-container .left .img-stack {
+        height: 100%; }
+      #product-overlay .content-container .left .img-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1.0;
+        transform: translateY(0);
+        height: 100%;
+        width: 100%;
+        transition: .5s all; }
+        #product-overlay .content-container .left .img-container img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          z-index: 20;
+          cursor: pointer;
+          width: 500px;
+          box-shadow: 0 0 50px 30px rgba(0, 0, 0, 0.05); }
+      #product-overlay .content-container .left .img-container.clicked {
+        opacity: 0.0;
+        transform: translateY(-50%);
+        transition: .5s all; }
     #product-overlay .content-container .right {
       padding: 40px;
-      vertical-align: top; }
+      vertical-align: top;
+      position: relative; }
+      #product-overlay .content-container .right .close {
+        float: right; }
+      #product-overlay .content-container .right .text-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%); }
+
+button {
+  cursor: pointer; }
+
+button.close {
+  border: none;
+  background: none;
+  font-size: 20px;
+  font-family: BigCaslonMedium, serif; }
+
+button.close:hover {
+  color: #fa374a; }
 
 /*# sourceMappingURL=main.css.map */

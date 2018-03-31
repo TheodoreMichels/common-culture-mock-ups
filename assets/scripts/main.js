@@ -2,8 +2,10 @@ var landingImages = ['blue-shirt-girl', 'cactus', 'jacket-back', 'shirt-boy', 's
 
 var galleryImages = ['blue-shirt-girl', 'cactus', 'jacket-boy', 'shirt-boy', 'shirt-girl'];
 
+var productImages = ['jacket-boy', 'jacket-girl', 'jacket-close', 'jacket-back'];
+
 function randomRotation(){
-    return ((Math.random() - 0.5) * 2.0) * 10.0;
+    return ((Math.random() - 0.5) * 2.0) * 8.0;
 }
 
 $(function(){
@@ -12,7 +14,6 @@ $(function(){
         var randRotation = randomRotation();
         var randZ = Math.floor(Math.random() * 10);
         $('#image-stack-container .image-stack').append('<div class="img-container" style="z-index:'+randZ+';"><img style="transform: rotateZ('+randRotation+'deg)" src=assets/images/'+landingImages[i]+'.jpg></div>');
-        
         
     }
     
@@ -24,6 +25,16 @@ $(function(){
             '<div class="overlay"><h3>Product Title</h3></div>'+
             '</div></div>');
     }
+    
+    for(var i = 0; i < productImages.length; i++){
+        $('#product-overlay .img-stack').append(
+            '<div class="img-container">'+
+            '<img style="transform:translateX(-50%) translateY(-50%) rotateZ('+randomRotation()+'deg)" src="assets/images/'+productImages[i]+'.jpg">'+
+            '</div>'
+            );
+    }
+    
+    /* INTERACTION */
     
     $('#image-stack-container .image-stack').click(function(){
         $(this).find('.img-container').each(function(i){
@@ -39,6 +50,25 @@ $(function(){
         
         $('#landing-title span').addClass('open');
         $('#landing-nav').fadeIn();
+    });
+    
+    var productIndex = 0;
+    
+    $('#product-overlay .img-stack img').click(function(){
+        var $container = $(this).parent();
+        $container.addClass('clicked');
+        
+        setTimeout(function(){
+            $container.prependTo($container.parent());
+            
+            setTimeout(function(){
+                $container.removeClass('clicked');
+            }, 200);
+        }, 500);
+
+        productIndex++;
+        productIndex%=productImages.length;
+        console.log(productIndex);
     });
     
     $('#about-link').click(function(){
