@@ -1,25 +1,24 @@
 #products-gallery {
     box-sizing: border-box;
-    padding: 10px;
+    padding: 0 0 $spacing-m 0;
     max-width: $site-max-width;
     margin: 0 auto;
     font-size: 0;
-
+    margin-top: -$spacing-xs;
 
 
     .gallery-item-box {
-        padding: 10px;
+        padding: $spacing-s;
         box-sizing: border-box;
         display: inline-block;
-        width: 33.33%;
-        width: calc(100% / 3.0);
+        width: 25%;
     }
     .gallery-item {
         cursor: pointer;
         
         position: relative;
         width: 100%; //height: 100%;
-        padding-top: 100%;
+        padding-top: 150%;
         background-size: cover;
         background-position: center center;
 
@@ -40,6 +39,7 @@
             h3{
                 @include center-in-parent;
                 color: white;
+                font-family: $general-font;
             }
         }
     }
@@ -70,4 +70,27 @@
         transition: .3s all;
     }
 
+}
+
+#filters{
+    z-index: $z-filter;
+    text-transform: lowercase;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: $spacing-s;
+    ul{
+        li{
+            font-size: $font-size-xs;
+            letter-spacing: $letter-spacing;
+            margin: -1px;
+            @include link-underline($spacing-s);
+            
+            a{
+                padding: $spacing-s;
+                background-color: $off-white;
+            }
+        }
+    }
 }

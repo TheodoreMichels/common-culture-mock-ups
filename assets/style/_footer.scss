@@ -1,0 +1,51 @@
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+    padding: $spacing-l;
+    background-color: $dark;
+    color: white;
+    font-size: 0;
+    font-family: $general-font;
+    p{
+        
+        position: absolute;
+        right: 0;
+        font-size: $font-size-xxs;
+        font-weight: 100;
+        //text-transform: uppercase;
+    }
+    #email-signup{
+        width: 50%;
+        display: inline-block;
+        
+        label{
+            padding-right: $spacing-m;
+        }
+        input{
+            width: 300px;
+        }
+        button{
+            margin: 0 $spacing-xs;
+        }
+    }
+    
+    .social{
+        text-align: right;
+        width: 50%;
+        display: inline-block;
+        ul{
+            li{
+                display: inline-block;
+                padding: $spacing-m 0 $spacing-m $spacing-m;
+                a{
+                    color: $off-white;
+                    &:hover{
+                        color: $accent-red;
+                    }
+                }
+            }
+        }
+    }
+}

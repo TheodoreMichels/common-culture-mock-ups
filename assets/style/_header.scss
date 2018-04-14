@@ -1,0 +1,38 @@
+header {
+    text-align: center;
+    background-color: $off-white;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    nav {
+        display: inline-block;
+        pointer-events: all;
+        ul {
+
+            text-transform: lowercase;
+            li {
+                display: inline-block;
+                letter-spacing: $letter-spacing;
+                font-size: $font-size-xs;
+                
+                cursor: pointer;
+
+                @include link-underline($spacing-l);
+                
+                a{
+                    padding: $spacing-l;
+                }
+                a.active{
+                    color: $accent-red;
+                    &::after{
+                        background: linear-gradient(to right, $accent-red, transparent);
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,28 +1,70 @@
 $off-white: #f4f1ea;
-
+$dark: #202020;
 $accent-red: #fa374a;
 
 $font-size-xl: 70px;
 $font-size-l: 50px;
 $font-size-m: 30px;
 $font-size-s: 20px;
+$font-size-xs: 16px;
+$font-size-xxs: 12px;
 
-$spacing-m: 40px;
-$spacing-xs: 10px;
+$spacing-xl: 80px;
+$spacing-l: 40px;
+$spacing-m: 24px;
+$spacing-s: 12px;
+$spacing-xs: 5px;
 
-$site-max-width: 1400px;
+$letter-spacing: 2px;
 
-$title-font: BigCaslonMedium, serif;
-$general-font: BigCaslonMedium, serif;
+$site-max-width: 1200px;
 
-@mixin center-in-parent{
+$title-font: BigCaslonMedium,
+serif;
+$general-font: 'Roboto',
+sans-serif;
+$secondary-font: Delirium,
+sans-serif;
+
+$z-overlay: 90;
+$z-header: 100;
+$z-filter: 80;
+
+@mixin center-in-parent {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
 
-@font-face{
+@mixin link-underline($padding) {
+    a {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+    a::after {
+        content: "";
+        position: absolute;
+        left: $padding;
+        bottom: calc(#{$padding} - 4px);
+        width: 0%;
+        height: 2px;
+        background: linear-gradient(to right, $dark, transparent);
+        transition: .3s all;
+    }
+    &:hover a::after {
+        width: calc(100% - #{$padding} * 2);
+        transition: .3s all;
+    }
+}
+
+@font-face {
     font-family: BigCaslonMedium;
     src: url(../fonts/BigCaslonMedium.ttf);
+}
+
+@font-face {
+    font-family: Delirium;
+    src: url(../fonts/ftyDeliriumNcv.ttf);
 }

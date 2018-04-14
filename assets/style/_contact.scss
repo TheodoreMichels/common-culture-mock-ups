@@ -1,0 +1,23 @@
+#contact-container{
+    text-align: center;
+    @include center-in-parent;
+    top: 40%;
+
+    .social{
+        
+        margin: $spacing-m;
+        text-transform: uppercase;
+        font-family: $secondary-font;
+        ul{
+            text-align: center;
+            li{
+                display: inline-block;
+                font-size: $font-size-m;
+                margin: $spacing-m;
+                a:hover{
+                    color: $accent-red;
+                }
+            }
+        }
+    }
+}

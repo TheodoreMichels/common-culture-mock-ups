@@ -4,19 +4,30 @@
 }
 
 body{
+    position: relative;
     background-color: $off-white;
     min-height: 100vh;
     overflow-x: hidden;
-    font-family: $general-font;
+    font-family: $title-font;
+    
+    padding-top: 105px;
+    padding-bottom: 160px;
 }
 
 a{
     text-decoration: none;
-    color: black;
+    color: $dark;
+}
+p>a{
+    color:$accent-red;
 }
 
 p, li{
     font-size: $font-size-s;
+    line-height: 160%;
+}
+label{
+    font-size: $font-size-xs;
 }
 
 h1, h2, h3{
@@ -41,4 +52,29 @@ h4{
 ul{
     list-style: none;
     padding: 0;
+}
+
+.max-container{
+    position: relative;
+    max-width: $site-max-width;
+    margin: 0 auto;
+}
+
+input, select{
+    font-family: $general-font;
+    border: none;
+    background-color: $off-white;
+    padding: $spacing-s;
+}
+button[type="submit"]{
+    
+    padding: $spacing-s;
+    padding-bottom: calc(#{$spacing-s} - 1px);
+    border: solid 1px $accent-red;
+    background: none;
+    color: $accent-red;
+    &:hover{
+        background-color: $accent-red;
+        color: $off-white;
+    }
 }

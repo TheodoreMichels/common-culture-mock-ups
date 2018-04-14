@@ -1,35 +1,14 @@
-#about-overlay{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    
-    display: none;
-    
-    background-color: transparentize($off-white, 0.2);
-    
+#about-container{
     .text-container{
-        @include center-in-parent;
-        
+        margin: $spacing-l auto;
         max-width: 600px;
         
         text-align: center;
         
         .close{
             position: absolute;
-            top: -20px;
-            right: -20px;
-        }
-    }
-    
-    .social{
-        margin: $spacing-m;
-        text-transform: uppercase;
-        ul{
-            li{
-                display: inline-block;
-            }
+            top: -$spacing-l;
+            right: -$spacing-l;
         }
     }
 }
