@@ -8,6 +8,11 @@
             <li><a href='shop.php'>Collections</a></li>
         </ul>
     </nav>
+    
+    <div class='icons'>
+        <i class="fas fa-shopping-cart"></i>
+        <i class="fas fa-user"></i>
+    </div>
 </header>
 
 <main class="<?php echo $title; ?>">

@@ -1,9 +1,14 @@
 #about-container{
     .text-container{
-        margin: $spacing-l auto;
-        max-width: 600px;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translateX(-50%) translateY(-50%);
         
-        text-align: center;
+        margin: $spacing-l auto;
+        max-width: 620px;
+        
+        text-align: left;
         
         .close{
             position: absolute;

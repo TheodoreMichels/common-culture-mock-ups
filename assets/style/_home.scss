@@ -23,8 +23,8 @@
         transition: 1s all cubic-bezier(0.19, 1, 0.22, 1);
     }
     img {
-        max-width: 450px;
-        max-height: 90vh;
+        max-width: 420px;
+        max-height: 75vh;
         transition: 1s all;
     }
 }
@@ -37,6 +37,7 @@
         @include center-in-parent;
         pointer-events: none;
         mix-blend-mode: multiply;
+        max-width: 700px;
     }
     #landing-title {
         pointer-events: none;
@@ -68,11 +69,12 @@
     #landing-nav {
         @include center-in-parent;
         display: none;
-
+        
         li {
             margin: $spacing-s; //display: inline-block;
             h3 {
                 text-transform: lowercase;
+                font-weight: 700;
                 a {
                     transition: .3s all;
                     &:hover {

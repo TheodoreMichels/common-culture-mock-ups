@@ -1,10 +1,11 @@
 $off-white: #f4f1ea;
+$off-white-dark: #efeee7;
 $dark: #202020;
 $accent-red: #fa374a;
 
 $font-size-xl: 70px;
 $font-size-l: 50px;
-$font-size-m: 30px;
+$font-size-m: 24px;
 $font-size-s: 20px;
 $font-size-xs: 16px;
 $font-size-xxs: 12px;
@@ -17,7 +18,7 @@ $spacing-xs: 5px;
 
 $letter-spacing: 2px;
 
-$site-max-width: 1200px;
+$site-max-width: 1280px;
 
 $title-font: BigCaslonMedium,
 serif;
@@ -47,14 +48,16 @@ $z-filter: 80;
         content: "";
         position: absolute;
         left: $padding;
-        bottom: calc(#{$padding} - 4px);
-        width: 0%;
+        bottom: calc(#{$padding} - 8px);
+        width: calc(100% - #{$padding} * 2);
+        opacity: 0.0;
         height: 2px;
-        background: linear-gradient(to right, $dark, transparent);
+        background-color: black;
         transition: .3s all;
     }
     &:hover a::after {
-        width: calc(100% - #{$padding} * 2);
+        opacity: 1.0;
+        bottom: calc(#{$padding} - 4px);
         transition: .3s all;
     }
 }

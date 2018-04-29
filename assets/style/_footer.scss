@@ -1,46 +1,54 @@
 footer{
-    position: absolute;
+    z-index: $z-header;
+    position: fixed;
     bottom: 0;
     width: 100%;
     
-    padding: $spacing-l;
-    background-color: $dark;
-    color: white;
+    //padding: $spacing-l;
+    //background-color: $dark;
+    //color: white;
     font-size: 0;
     font-family: $general-font;
+    border-top: solid 1px transparentize($dark, 0.8);
+    background-color: $off-white-dark;
     p{
-        
-        position: absolute;
-        right: 0;
+        text-align: center;
+        display: inline-block;
+        width: 20%;
         font-size: $font-size-xxs;
         font-weight: 100;
         //text-transform: uppercase;
     }
     #email-signup{
-        width: 50%;
+        width: 40%;
         display: inline-block;
         
+        
         label{
-            padding-right: $spacing-m;
+            font-size: $font-size-xxs;
+            padding-right: $spacing-s;
         }
         input{
-            width: 300px;
+            padding: $spacing-xs;
+            border: solid 1px $dark;
+            width: 250px;
         }
         button{
+            padding: $spacing-xs;
             margin: 0 $spacing-xs;
         }
     }
     
     .social{
         text-align: right;
-        width: 50%;
+        width: 40%;
         display: inline-block;
         ul{
             li{
                 display: inline-block;
-                padding: $spacing-m 0 $spacing-m $spacing-m;
+                padding: $spacing-s 0 $spacing-s $spacing-s;
                 a{
-                    color: $off-white;
+                    color: $dark;
                     &:hover{
                         color: $accent-red;
                     }

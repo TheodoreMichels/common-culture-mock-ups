@@ -8,7 +8,9 @@
             <button type='submit'>Submit</button>
         </form>
         
-        <?php include "templates/social.php"; ?>
         <p>&copy; 2018 Common Culture</p>
+        
+        <?php include "templates/social.php"; ?>
+        
     </div>
 </footer>

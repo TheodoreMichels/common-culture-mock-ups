@@ -1,17 +1,19 @@
 header {
     text-align: center;
-    background-color: $off-white;
+    background-color: $off-white-dark;
     z-index: 100;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    pointer-events: none;
+    //pointer-events: none;
+    
+    border-bottom: solid 1px transparentize($dark, 0.8);
     nav {
         display: inline-block;
         pointer-events: all;
         ul {
-
+            font-weight: 700;
             text-transform: lowercase;
             li {
                 display: inline-block;
@@ -20,19 +22,35 @@ header {
                 
                 cursor: pointer;
 
-                @include link-underline($spacing-l);
+                @include link-underline($spacing-m);
                 
                 a{
-                    padding: $spacing-l;
+                    padding: $spacing-m;
                 }
                 a.active{
                     color: $accent-red;
                     &::after{
-                        background: linear-gradient(to right, $accent-red, transparent);
+                        background: $accent-red;
                     }
                 }
             }
 
+        }
+    }
+    .icons{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding-right: $spacing-m;
+        pointer-event: all;
+        i{
+            padding: $spacing-s;
+            color: $dark;
+            cursor: pointer;
+            &:hover{
+                color: $accent-red;
+            }
         }
     }
 }

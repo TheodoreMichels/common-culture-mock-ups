@@ -10,8 +10,8 @@ body{
     overflow-x: hidden;
     font-family: $title-font;
     
-    padding-top: 105px;
-    padding-bottom: 160px;
+    padding-top: 75px;
+    padding-bottom: 50px;
 }
 
 a{
@@ -23,7 +23,7 @@ p>a{
 }
 
 p, li{
-    font-size: $font-size-s;
+    font-size: $font-size-xs;
     line-height: 160%;
 }
 label{
@@ -64,10 +64,10 @@ input, select{
     font-family: $general-font;
     border: none;
     background-color: $off-white;
-    padding: $spacing-s;
+    //padding: calc(#{$spacing-s} - 1px);
 }
 button[type="submit"]{
-    
+    margin: 0 $spacing-xs;
     padding: $spacing-s;
     padding-bottom: calc(#{$spacing-s} - 1px);
     border: solid 1px $accent-red;

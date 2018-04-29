@@ -2,16 +2,16 @@
     box-sizing: border-box;
     padding: 0 0 $spacing-m 0;
     max-width: $site-max-width;
-    margin: 0 auto;
+    margin: $spacing-xs auto;
     font-size: 0;
-    margin-top: -$spacing-xs;
+    //margin-top: -$spacing-xs;
 
 
     .gallery-item-box {
-        padding: $spacing-s;
+        padding: $spacing-xs;
         box-sizing: border-box;
         display: inline-block;
-        width: 25%;
+        width: 20%;
     }
     .gallery-item {
         cursor: pointer;
@@ -80,6 +80,7 @@
     top: 50%;
     transform: translateY(-50%);
     padding: $spacing-s;
+    font-weight: 700;
     ul{
         li{
             font-size: $font-size-xs;
