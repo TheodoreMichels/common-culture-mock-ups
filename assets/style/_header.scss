@@ -9,10 +9,22 @@ header {
     //pointer-events: none;
     
     border-bottom: solid 1px transparentize($dark, 0.8);
+    
+    .logo{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        height: 60px;
+        padding-left: $spacing-s;
+    }
     nav {
+        
         display: inline-block;
         pointer-events: all;
         ul {
+            font-size: 0;
             font-weight: 700;
             text-transform: lowercase;
             li {
@@ -22,16 +34,13 @@ header {
                 
                 cursor: pointer;
 
-                @include link-underline($spacing-m);
+                @include highlight(tb);
                 
                 a{
                     padding: $spacing-m;
                 }
                 a.active{
-                    color: $accent-red;
-                    &::after{
-                        background: $accent-red;
-                    }
+                    //color: $accent-red;
                 }
             }
 

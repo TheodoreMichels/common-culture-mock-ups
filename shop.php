@@ -14,7 +14,7 @@ include "templates/header.php";
         </ul>
     </div>
     
-    <div id='products-gallery'>
+    <div id='products-gallery' class='max-container'>
         
     </div>
 

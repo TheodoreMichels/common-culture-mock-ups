@@ -4,7 +4,7 @@ include "templates/header.php";
 ?>
 
 <div id='product-overlay'>
-    <div class='content-container'>
+    <div class='content-container max-container'>
         
         <div class='left'>
             <div class='img-stack'>

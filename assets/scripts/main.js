@@ -1,6 +1,6 @@
 var landingImages = ['blue-shirt-girl', 'cactus', 'jacket-back', 'shirt-boy', 'shirt-girl']
 
-var galleryImages = ['blue-shirt-girl', 'cactus', 'jacket-boy', 'shirt-boy', 'shirt-girl', 'jacket-girl'];
+var galleryImages = ['blue-shirt-girl', 'dark-shirt', 'cactus', 'grey-hat', 'jacket-boy', 'orange-beanie', 'shirt-boy', 'red-sweater', 'shirt-girl', 'purple-shirt', 'white-shirt', 'jacket-girl', 'red-socks', 'yellow-hoodie', 'orange-hoodie'];
 
 var productImages = ['jacket-boy', 'jacket-girl', 'jacket-close', 'jacket-back'];
 
@@ -51,6 +51,7 @@ $(function(){
         
         $('#landing-title span').addClass('open');
         $('#landing-nav').fadeIn();
+        $('.logo').fadeOut();
     });
     
     var productIndex = 0;

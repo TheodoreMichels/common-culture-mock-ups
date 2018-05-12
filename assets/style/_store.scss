@@ -1,17 +1,15 @@
 #products-gallery {
     box-sizing: border-box;
-    padding: 0 0 $spacing-m 0;
-    max-width: $site-max-width;
-    margin: $spacing-xs auto;
+    padding: 63px 0 $spacing-m 0;
     font-size: 0;
     //margin-top: -$spacing-xs;
 
 
     .gallery-item-box {
-        padding: $spacing-xs;
+        padding: $spacing-s;
         box-sizing: border-box;
         display: inline-block;
-        width: 20%;
+        width: 25%;
     }
     .gallery-item {
         cursor: pointer;
@@ -79,17 +77,17 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    padding: $spacing-s;
+    //padding: $spacing-s;
     font-weight: 700;
     ul{
         li{
             font-size: $font-size-xs;
             letter-spacing: $letter-spacing;
-            margin: -1px;
-            @include link-underline($spacing-s);
+            //margin: -1px;
+            @include highlight(lr);
             
             a{
-                padding: $spacing-s;
+                padding: $spacing-xs $spacing-s;
                 background-color: $off-white;
             }
         }

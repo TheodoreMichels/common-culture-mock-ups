@@ -1,23 +1,39 @@
-#contact-container{
+#contact-container {
     text-align: center;
     @include center-in-parent;
-    top: 40%;
+    top: 45%;
 
-    .social{
-        
-        margin: $spacing-m;
+}
+
+.bottom {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+
+    bottom: 103px;
+
+    .social {
+
+        margin: $spacing-s;
         text-transform: uppercase;
-        ul{
+        ul {
             text-align: center;
-            li{
+            li {
                 display: inline-block;
                 font-size: $font-size-xs;
                 font-weight: 700;
-                margin: $spacing-m;
-                a:hover{
+                margin: $spacing-s;
+                a:hover {
                     color: $accent-red;
                 }
             }
         }
+    }
+
+    .copyright {
+        p {
+            font-size: $font-size-xxs;
+        }
+        font-family: $general-font;
     }
 }

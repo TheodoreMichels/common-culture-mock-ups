@@ -39,11 +39,17 @@
         mix-blend-mode: multiply;
         max-width: 700px;
     }
+    .logo{
+        @include center-in-parent;
+        width: 300px;
+        pointer-events: none;
+    }
     #landing-title {
+        font-size: $font-size-l;
         pointer-events: none;
         color: white;
         position: absolute;
-        top: 50%;
+        top: 75%;
 
         width: 100%;
         transform: translateY(-50%);

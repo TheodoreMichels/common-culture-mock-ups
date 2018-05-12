@@ -1,10 +1,10 @@
 </main>
 
 <footer>
-    <div class="max-container">
+    <div>
         <form id='email-signup'>
-            <label>Sign up for updates:</label>
-            <input type='email' placeholder='Your email address'>
+            <label>Newsletter:</label>
+            <input type='email' placeholder='email address'>
             <button type='submit'>Submit</button>
         </form>
         
