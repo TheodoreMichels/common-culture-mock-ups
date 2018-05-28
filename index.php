@@ -8,9 +8,9 @@
     
     <div id='landing-container'>
         <div class='text-container'>
-            <img class='accent' src='assets/images/red-splash.png' alt='Splash'>
-            <img class='logo' src='assets/images/cclogo-white.png' alt='Logo'>
-            <h1 id='landing-title'><span>Common</span> <span>Culture</span></h1>
+            <!--<img class='accent' src='assets/images/red-splash.png' alt='Splash'>-->
+            <!--<img class='logo' src='assets/images/cclogo-white.png' alt='Logo'>-->
+            <!--<h1 id='landing-title'><span>Common</span> <span>Culture</span></h1>-->
             
             <nav id='landing-nav'>
                 <ul>

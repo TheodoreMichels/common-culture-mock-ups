@@ -10,6 +10,33 @@ header {
     
     border-bottom: solid 1px transparentize($dark, 0.8);
     
+    font-family: $title-font-2;
+    
+    @include media($desktop-small){
+        height: 50px;
+    }
+    
+    h1{
+        position: absolute;
+        left: $spacing-m;
+        top: 46%;
+        transform: translateY(-50%);
+        font-family: $title-font-2;
+        text-transform: lowercase;
+        font-size: 30px;
+        letter-spacing: 2px;
+        line-height: 25px;
+        
+        @include media($desktop-small){
+            position: static;
+            transform: none;
+            margin-top: 2px;
+            
+            font-size: $font-size-m;
+            line-height: 20px;
+        }
+    }
+    
     .logo{
         position: absolute;
         left: 0;
@@ -23,6 +50,11 @@ header {
         
         display: inline-block;
         pointer-events: all;
+        
+        @include media($desktop-small){
+            display: none;
+        }
+        
         ul {
             font-size: 0;
             font-weight: 700;
@@ -60,6 +92,19 @@ header {
             &:hover{
                 color: $accent-red;
             }
+        }
+    }
+    #hamburger{
+        display: none;
+        
+        position: absolute;
+        padding: $spacing-m;
+        left: 0;
+        top: 50%;
+        transform: translateY(-52%);
+        
+        @include media($desktop-small){
+            display: block;
         }
     }
 }

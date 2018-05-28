@@ -1,5 +1,10 @@
 <header>
-    <a href='index.php'><img class='logo' src='assets/images/cclogo.png' alt='Common Culture'></a>
+    <div id='hamburger'>
+        <i class="fas fa-bars"></i>
+
+    </div>
+    
+    <a href='index.php'><h1>Common<br>Culture</h1></a>
     
     <nav>
         <ul>

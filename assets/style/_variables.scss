@@ -23,6 +23,7 @@ $site-max-width: 1280px;
 
 $title-font: BigCaslonMedium,
 serif;
+$title-font-2: Caniste, serif;
 $general-font: 'Roboto',
 sans-serif;
 $secondary-font: Delirium,
@@ -31,6 +32,21 @@ sans-serif;
 $z-overlay: 90;
 $z-header: 100;
 $z-filter: 80;
+
+$phone-medium: 480px;
+$phone-large: 512px;
+$tablet: 768px;
+$desktop-small: 1024px;
+
+@mixin media($width) {
+
+  $declaration: "only screen and (max-width: #{$width})";
+
+  @media #{$declaration} {
+    @content;
+  }
+
+}
 
 @mixin center-in-parent {
     position: absolute;
@@ -88,4 +104,9 @@ $z-filter: 80;
 @font-face {
     font-family: Delirium;
     src: url(../fonts/ftyDeliriumNcv.ttf);
+}
+
+@font-face {
+    font-family: Caniste;
+    src: url(../fonts/CanisteDemo-Semibold.ttf)
 }

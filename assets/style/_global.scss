@@ -11,8 +11,10 @@ body{
     font-family: $title-font;
     
     padding-top: 75px;
-    padding-bottom: 65px;
     
+    @include media($desktop-small){
+        padding-top: 50px;
+    }
 }
 
 a{

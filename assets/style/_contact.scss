@@ -1,8 +1,15 @@
+.contact{
+    min-height: calc(100vh - 138px);
+}
+
 #contact-container {
-    text-align: center;
+    text-align: left;
     @include center-in-parent;
     top: 45%;
 
+    a{
+        color: $dark;
+    }
 }
 
 .bottom {

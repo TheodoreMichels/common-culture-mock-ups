@@ -1,14 +1,15 @@
 footer{
     z-index: $z-header;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    //position: fixed;
+    //bottom: 0;
+    //width: 100%;
     
     //padding: $spacing-l;
     //background-color: $dark;
     //color: white;
     font-size: 0;
-    font-family: $general-font;
+    font-family: $title-font-2;
+    text-transform: lowercase;
     border-top: solid 1px transparentize($dark, 0.8);
     background-color: $off-white-dark;
     >div{
@@ -21,6 +22,14 @@ footer{
         font-size: $font-size-xs;
         font-weight: 100;
         //text-transform: uppercase;
+        
+        @include media($desktop-small){
+            display: block;
+            text-align: center;
+            width: 100%;
+            
+        }
+        
     }
     #email-signup{
         width: 40%;
@@ -48,6 +57,14 @@ footer{
                 color: $off-white;
             }
         }
+        
+        @include media($desktop-small){
+            display: block;
+            text-align: center;
+            width: 100%;
+            
+            padding: $spacing-s;
+        }
     }
     
     .social{
@@ -67,6 +84,12 @@ footer{
                     }
                 }
             }
+        }
+        
+        @include media($desktop-small){
+            display: block;
+            text-align: center;
+            width: 100%;
         }
     }
 }
